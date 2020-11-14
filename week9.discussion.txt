@@ -1,0 +1,62 @@
+10 Data Types in MySQL:
+  
+Numeric Data Types:
+
+  Fixed Point Types:
+
+	DECIMAL: Syntax - DECIMAL(Precision, Scale)
+	Precision would be the number of digits stored, while scale is the number of digits after the decimal
+	According to this website it states that using NUMERIC instead of DECIMAL works as well.
+	
+
+  Integer Types:
+
+	INT: Syntax - INT(optional numeric scale)
+	You basically just fill the spot with the knowledge that a number is to go there, you can limit the amount of digits by entering a specific range.
+	INTEGER works as well. The number range is 0-4294967295 (not considering negative and positive this would be smaller)
+
+	SMALLINT: Syntax SMALLINT(optional numeric scale)
+	This is a numeric value holder that actually does the same things as INT/INTEGER but it has a much smaller scale.
+	If someone needed to run a program faster and knew how to maximize usage they could utilize this.
+	Scale is 0-65535
+
+	BIGINT: Syntax - BIGINT(optional numeric scale)
+	(not counting this one, but its basically the same, the range is BIG though, (0-18446744073709551615)	
+
+	
+  Floating Point Types:
+
+	FLOAT: Syntax - FLOAT(Total Digits, Decimal Points)
+	The values are specifying the range of the number and how large or in depth it can be, this does cause problems with implementation though.
+	So it is recommended to use it without the specifiers. It is different from decimal as it doesn't store the exact value and however creates an approximate.
+
+Date and Time Types:
+
+  	DATE: Syntax - DATE('YYYY-MM-DD')
+	Shows the date entered for the slot. 
+
+	DATETIME: Syntax - DATETIME('YYYY-MM-DD hh:mm:ss')
+	Same as DATE but includes the time.
+	
+	TIMESTAMP: Syntax - TIMESTAMP('hh:mm:ss')
+	Just the time.
+
+	YEAR: Syntax - YEAR('YYYY')
+	Displays a variety of formats from String to Int
+
+	NOW: Syntax - NOW()
+	Gives the DATETIME for right now, same as SYSDATE
+
+String Types:
+
+  Char Types:
+
+	CHAR: Syntax - CHAR(Optional Number of Characters)
+	It retains its size no matter what is input. If someone put '' it would still be 4 empty characters long.
+	0-255 length limits, values truncate
+
+	VARCHAR: Syntax - VARCHAR(Optional Number of Characters)
+	It changes size based on the input, so if '' were used it be 1 byte instead of the input value. 
+	0-65535 length limits, values truncate
+
+
